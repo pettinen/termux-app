@@ -602,19 +602,6 @@ public class PackageUtils {
     }
 
     /**
-     * Check if the current user is the primary user. This is done by checking if the the serial
-     * number for the current user equals 0.
-     *
-     * @param context The {@link Context} for operations.
-     * @return Returns {@code true} if the current user is the primary user, otherwise [@code false}.
-     */
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public static boolean isCurrentUserThePrimaryUser(@NonNull Context context) {
-        Long userId = getUserIdForPackage(context);
-        return userId != null && userId == 0;
-    }
-
-    /**
      * Get the profile owner package name for the current user.
      *
      * @param context The {@link Context} for operations.
